@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "id": "q5k1",
+      "userId": "0008",
+      "product_name": "Notebook",
+      "category": "Notebooks & Paper",
+      "brand": "Classmate",
+      "price": "85",
+      "product_image": "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/NI_CATALOG/IMAGES/CIW/2024/3/11/00f06bc4-eb3e-41fe-8985-52c1c0ba0226_6e78f06d-5feb-4801-9986-e4823db32df5.jpg",
+      "description": "asdfghjkjhgfdsasdfg",
+      "stock": "2"
+    },
+    {
+      "id": "f0jp",
+      "userId": "071a",
+      "product_name": "Ball Pen",
+      "category": "Notebooks & Paper",
+      "brand": "Doms",
+      "price": "23",
+      "product_image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTTgDls1WeJ-LLNSh2Kzk-Cc_0b_DYQ2fhN4y40LpzmDC6Ik_LutJX0uAGB0IWaVeh63oN1_0U7WBEYYRanlCHz2CxZ5RGaJivD86ovP1jacrusJo3P6y9vwA",
+      "description": "hhb",
+      "stock": "23"
+    }
+  ]
+}

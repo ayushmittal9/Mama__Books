@@ -1,0 +1,96 @@
+/* Reset default browser styles */
+.Viewproduct * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.Viewproduct {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 3rem 2rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+/* Product Image Section */
+.thumbnail {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail img:hover {
+  transform: scale(1.05);
+}
+
+/* Product Description Section */
+.desc {
+  flex: 2;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.desc h1 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.desc h2 {
+  color: #444;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.desc h2 strike {
+  color: #888;
+  margin-right: 8px;
+}
+
+.desc span {
+  color: #007b5e;
+  font-weight: 600;
+}
+
+.desc h4 {
+  color: #555;
+  font-size: 1rem;
+  margin: 1.2rem 0;
+  line-height: 1.6;
+}
+
+.desc h3 {
+  font-size: 1.1rem;
+  color: #222;
+  margin: 1rem 0;
+}
+
+.rating {
+  color: #007b5e;
+  font-weight: 600;
+}
+

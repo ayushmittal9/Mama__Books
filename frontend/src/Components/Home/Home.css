@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Root container - Aligned with form's clean white + shadow aesthetic */
+.card-component {
+  max-width: 1300px;
+  margin: 40px auto 0; /* Added top margin to space from navbar; adjust as needed */
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  background: #ffffff; /* Pure white like the form */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Exact shadow match */
+  position: relative;
+  overflow: hidden;
+  z-index: 1; /* Low z-index to stay below navbar dropdown (assume navbar dropdown is z-index: 999 or similar) */
+}
+
+.split-container {
+  display: flex;
+  height: 450px; 
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.text-side {
+  width: 50%;
+  padding: 30px; /* Matches form padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: #fafafa; /* Light like input bg */
+  min-height: 450px; /* Fixed to prevent shifts */
+  position: relative;
+  z-index: 2;
+}
+
+.card-carousel-caption {
+  width: 100%;
+  position: relative;
+}
+.card-carousel-caption h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2d2d2d; /* Matches form title color */
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.card-carousel-caption p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 400;
+  min-height: 72px; 
+}
+
+.card-carousel-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,147 @@
+.navbar1-wrapper {
+  font-family: 'Helvetica', sans-serif;
+}
+
+.navbar1-wrapper .navbar1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 60px;
+  background: #ff9900;
+  color: white;
+}
+
+.navbar1-wrapper .logo1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.navbar1-wrapper .logo1 span {
+  color: #232f3e;
+}
+
+.navbar1-wrapper .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 8px;
+}
+
+.navbar1-wrapper .nav-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar1-wrapper .nav-links li a:hover {
+  color: #232f3e;
+}
+
+.navbar1-wrapper .nav-links li a.active {
+  border-bottom: 2px solid #232f3e;
+}
+
+.navbar1-wrapper .search-bar {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.navbar1-wrapper .search-bar input {
+  background-color: #e6e6e6;
+  margin-top: 18px;
+  padding: 5px 10px;
+  border: none;
+  height: 35px;
+  border-radius: 20px 0px 0px 10px;
+  width: 400px;
+  font-size: 1rem;
+  padding-left: 10px; /* Added for better placeholder alignment */
+}
+
+.navbar1-wrapper .search-bar input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.navbar1-wrapper .search-bar button {
+  padding: 5px 10px;
+  margin-top: 4px;
+  background-color: #232f3e;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1rem;
+  border: none;
+  height: 35.5px; /* Consistent height */
+  width: 120px;
+  border-radius: 0px 10px 20px 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover */
+}
+
+.navbar1-wrapper .search-bar button:hover {
+  background-color: #e6e6e6;
+  color: #232f3e;
+}
+
+.navbar1-wrapper .profile-btn {
+  /* Style your profile button */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.navbar1-wrapper .profile-btn:hover {
+  color: #232f3e;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .navbar1-wrapper .navbar1 {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .navbar1-wrapper .search-bar input {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .navbar1-wrapper .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar1-wrapper .logo1 {
+    margin-bottom: 10px; /* Added for better mobile spacing */
+  }
+
+  .navbar1-wrapper .profile-btn {
+    align-self: center; /* Center on mobile */
+    margin-top: 5px;
+  }
+}

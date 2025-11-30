@@ -1,0 +1,122 @@
+/* Contact.css - Styled like signup: green accents, similar structure/shadows, scoped for consistency */
+
+.contact-page {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Match signup's container bg */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.contact-page * {
+  box-sizing: border-box;
+}
+
+.contact-page form {
+  background: white; /* Inner form white like signup */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter inner shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-page h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 28px; /* Signup-like sizing */
+  font-weight: bold;
+}
+
+.contact-page h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #4CAF50; /* Green accent like signup */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.contact-page p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 14px; /* Match signup subtitle */
+  line-height: 1.4;
+}
+
+.contact-page .form-group {
+  flex: 1;
+  margin-bottom: 20px; /* Signup-like grouping */
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold; /* Signup label style */
+}
+
+.contact-page .form-group input,
+.contact-page .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Signup radius */
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.contact-page .form-group input:focus,
+.contact-page .form-group textarea:focus {
+  outline: none;
+  border-color: #4CAF50; /* Green focus like signup */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.contact-page .form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-page button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50; /* Green like signup submit */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-page button:hover {
+  background-color: #45a049; /* Signup hover */
+}
+
+/* Mobile responsiveness tweak */
+@media (max-width: 480px) {
+  .contact-page {
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
+  .contact-page form {
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .contact-page h1 {
+    font-size: 24px;
+  }
+}
