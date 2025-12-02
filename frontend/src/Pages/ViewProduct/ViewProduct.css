@@ -94,3 +94,17 @@
   font-weight: 600;
 }
 
+.btn-active{
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007b5e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-active:hover {
+  background-color: #005a3c;
+}

@@ -66,6 +66,9 @@ function Navbar() {
                     </a>
                   </li>
                   <li>
+                    <a onClick={() => navigate(`/yourbeg`)}>Your Beg</a>
+                  </li>
+                  <li>
                     <a>Settings</a>
                   </li>
                   {/* <li>

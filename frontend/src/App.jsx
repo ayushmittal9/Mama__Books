@@ -8,6 +8,7 @@ import Contact from './Pages/Contact/Contact';
 import Profile from './Pages/Profile/Profile';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import ViewProduct from './Pages/ViewProduct/ViewProduct';
+import Beg from './Pages/YourBeg/Beg';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/profile/:id' element={<Profile />} />
         <Route path='/:id/addproduct' element={<AddProduct />} />
         <Route path="/viewproduct/:id" element={<ViewProduct />} />
+        <Route path='/yourbeg' element={<Beg />} />
       </Routes>
     </BrowserRouter>
   )

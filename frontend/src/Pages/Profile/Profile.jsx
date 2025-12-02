@@ -24,7 +24,7 @@ const handleLogout = () => {
     <div className="Viewuser">
       <div className="desc">
         <h1>{user.username}</h1>
-        <h2>Email: <strike>{user.email}</strike></h2>
+        <h2>Email: {user.email}</h2>
         <h2><span>Phone : {user.phone}</span></h2>
         <h4>Address : {user.address}</h4>
         <h3><span>{user.city}, {user.postalCode}</span></h3>
