@@ -4,6 +4,8 @@ import Navbar2 from './Components/Navbar2/Navbar2'
 import Home from './Components/Home/Home'
 import CardSection from './Components/Card/CardSection'
 import AllProduct from './Components/AllProduct/AllProduct'
+import Footer from './Components/Footer/Footer'
+import Theme from './Components/Theme/Theme'
 
 function MainPage() {
   return (
@@ -13,6 +15,8 @@ function MainPage() {
       <Home />
       <CardSection />
       <AllProduct />
+      <Footer />
+      <Theme />
     </>
   )
 }

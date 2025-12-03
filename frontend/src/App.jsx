@@ -9,6 +9,7 @@ import Profile from './Pages/Profile/Profile';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import ViewProduct from './Pages/ViewProduct/ViewProduct';
 import Beg from './Pages/YourBeg/Beg';
+import Footer from './Components/Footer/Footer';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/:id/addproduct' element={<AddProduct />} />
         <Route path="/viewproduct/:id" element={<ViewProduct />} />
         <Route path='/yourbeg' element={<Beg />} />
+        <Route path='/footer'  element={<Footer />} />
       </Routes>
     </BrowserRouter>
   )
