@@ -1,0 +1,10 @@
+.cards-container {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  justify-content: center; /* Centers the row if needed; change to flex-start for left-align */
+  align-items: flex-start; /* Aligns tops; use center for vertical centering */
+  gap: 1.5rem; /* Space between cards (adjust as needed, e.g., 2rem for more) */
+  flex-wrap: wrap; /* Wraps to next line on smaller screens */
+  padding: 1rem; /* Optional: Overall padding */
+  width: 100%; /* Full width container */
+}

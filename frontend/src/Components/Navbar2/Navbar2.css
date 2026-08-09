@@ -32,7 +32,7 @@
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 6px;
-  padding: 4px 16px; /* Reduced vertical padding to fit within 48px height */
+  padding: 4px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,9 +43,13 @@
   font-weight: 500;
   text-decoration: none;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-  height: 32px; /* Fixed height to precisely fit (48px navbar - 0 padding on sides, but ensures no overflow) */
-  box-sizing: border-box; /* Include padding in height calculation */
+  height: 32px; 
+  box-sizing: border-box; 
 }
+
+
+
+
 
 .dropdown-button:hover {
   background-color: #f1f5f9;
@@ -114,8 +118,26 @@
 .nested-dropdown {
   position: relative;
 }
+.category .nested-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  color: #1f2937;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
 
-.nested-button {
+.category .nested-button:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+/* .nested-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -131,7 +153,7 @@
 .nested-button:hover {
   background-color: #eff6ff;
   color: #2563eb;
-}
+} */
 
 .nested-menu {
   position: absolute;
@@ -163,11 +185,11 @@
   transition: transform 0.2s ease;
 }
 
-.icon {
-  width: 16px; /* Reduced from 20px to better fit height */
+/* .icon {
+  width: 16px; 
   height: 16px;
   transition: transform 0.2s ease;
-}
+} */
 
 .dropdown-container:hover .icon {
   transform: rotate(180deg);
