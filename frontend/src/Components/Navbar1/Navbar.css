@@ -78,6 +78,7 @@
 
 .navbar1-wrapper .search-bar input::placeholder {
   color: #888;
+  background-color: none;
   font-style: italic;
 }
 

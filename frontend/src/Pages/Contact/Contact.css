@@ -285,7 +285,7 @@
 ========================================= */
 
 .contact-form-section {
-  padding: 55px 55px;
+  padding: 45px 45px;
 
   background: #ffffff;
 
@@ -330,7 +330,7 @@
 ========================================= */
 
 .contact-form-section form {
-  width: 100%;
+  max-width: 800px;
 }
 
 

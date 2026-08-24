@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./CardSection.css";
 
 function CardSection() {
@@ -93,24 +93,8 @@ function CardSection() {
     },
   ];
 
-  const visibleCards = 5;
+  const visibleCards = 8;
   const cardWidth = 100 / visibleCards;
-
-  const [start, setStart] = useState(0);
-
-  // Auto Slide
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setStart((prev) => {
-        if (prev >= cards.length - visibleCards) {
-          return 0;
-        }
-        return prev + 1;
-      });
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [cards.length]);
 
   return (
     <div className="CardSection">
@@ -119,17 +103,12 @@ function CardSection() {
       </div>
 
       <div className="slider-wrapper">
-        <div
-          className="slider"
-          style={{
-            transform: `translateX(-${start * cardWidth}%)`,
-          }}
-        >
+        <div className="slider">
           {[...cards, ...cards].map((item, index1) => (
             <div
               className="slide-card"
               key={index1}
-              style={{ width: `${cardWidth}%` }}
+              style={{ width: `calc(${cardWidth}% - 10px)` }}
             >
               <div className="card card-sm bg-base-200 shadow max-w-60">
                 <figure className="hover-gallery">
@@ -156,5 +135,3 @@ function CardSection() {
 }
 
 export default CardSection;
-
-
