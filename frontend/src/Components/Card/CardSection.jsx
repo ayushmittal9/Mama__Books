@@ -101,6 +101,7 @@ function CardSection() {
       <div className="para">
         <p>Check out our latest products!</p>
         <h3>this is mama house</h3>
+        <p17>cnlkdnclkdslkds</p17>
       </div>
 
       <div className="slider-wrapper">
