@@ -1,0 +1,235 @@
+.navbar3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px; /* Removed top/bottom padding to allow full height usage */
+  height: 48px;
+  background: linear-gradient(90deg, #ff8c00, #ff6200); /* Vibrant orange gradient */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+  gap: 40px; /* Add gap between flex items to prevent overlap */
+  flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+  position: relative; /* Ensure navbar is positioned for z-index stacking */
+  z-index: 100; /* Base z-index for navbar to sit above page content */
+}
+
+.dropdown-container {
+  position: relative;
+  width: 240px;
+  margin: 0 8px; /* Ensure consistent spacing between dropdowns */
+  height: 100%; /* Full height of navbar to enable centering */
+  display: flex; /* Flex to center the button vertically */
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-container:hover {
+  transform: translateY(-2px);
+}
+
+.dropdown-button {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 4px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  height: 32px; 
+  box-sizing: border-box; 
+}
+
+
+
+
+
+.dropdown-button:hover {
+  background-color: #f1f5f9;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.dropdown-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 240px; /* Match container width to prevent overlap */
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  margin-top: 8px; /* Increased margin for better spacing */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000; /* Bumped up significantly to ensure it overlaps Card (z-index:1) and other elements */
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: visibility 0s linear 0.1s, opacity 0.3s ease, transform 0.3s ease;
+  top: 100%; /* Explicitly position below the button, not overflowing upward */
+}
+
+.dropdown-container:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.category {
+  padding: 12px;
+}
+
+.category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category li {
+  margin: 6px 0;
+  position: relative;
+}
+
+.category a {
+  display: block;
+  padding: 8px 12px;
+  color: #1f2937;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.category a:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.nested-dropdown {
+  position: relative;
+}
+.category .nested-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  color: #1f2937;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.category .nested-button:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+/* .nested-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  color: #1f2937;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nested-button:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+} */
+
+.nested-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 220px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: visibility 0s linear 0.1s, opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1010; /* Even higher for nested to stay above main dropdown and Card */
+}
+
+.nested-dropdown:hover .nested-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+
+/* Add .icon class to nested SVGs in JSX for consistency */
+.nested-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+/* .icon {
+  width: 16px; 
+  height: 16px;
+  transition: transform 0.2s ease;
+} */
+
+.dropdown-container:hover .icon {
+  transform: rotate(180deg);
+}
+
+.nested-dropdown:hover .nested-icon {
+  transform: rotate(-90deg);
+}
+
+/* Styling for the final 'More' button */
+.dropdown-button:last-child {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 16px; /* Match reduced padding */
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  height: 32px; /* Consistent height */
+}
+
+.dropdown-button:last-child:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar3 {
+    gap: 20px;
+    padding: 0 12px;
+  }
+
+  .dropdown-container {
+    width: auto;
+    margin: 0 4px;
+  }
+
+  .dropdown-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}

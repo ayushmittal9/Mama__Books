@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": "q5k1",
+      "userId": "0008",
+      "product_name": "Notebook",
+      "category": "Notebooks & Paper",
+      "brand": "Classmate",
+      "price": "85",
+      "product_image": "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/NI_CATALOG/IMAGES/CIW/2024/3/11/00f06bc4-eb3e-41fe-8985-52c1c0ba0226_6e78f06d-5feb-4801-9986-e4823db32df5.jpg",
+      "description": "asdfghjkjhgfdsasdfg",
+      "stock": "2"
+    },
+    {
+      "id": "rlfy",
+      "userId": "0008",
+      "product_name": "Gel Pen",
+      "category": "Writing Instruments",
+      "brand": "Doms",
+      "price": "23",
+      "product_image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTTgDls1WeJ-LLNSh2Kzk-Cc_0b_DYQ2fhN4y40LpzmDC6Ik_LutJX0uAGB0IWaVeh63oN1_0U7WBEYYRanlCHz2CxZ5RGaJivD86ovP1jacrusJo3P6y9vwA",
+      "description": "09ghj",
+      "stock": "23"
+    },
+    {
+      "id": "1x7r",
+      "userId": "071a",
+      "product_name": "Sketchbook",
+      "category": "Art Supplies",
+      "brand": "Classmate",
+      "price": "34",
+      "product_image": "https://m.media-amazon.com/images/I/71lgv0Xc-GL._SX679_.jpg",
+      "description": "fxghjjask",
+      "stock": "34"
+    },
+    {
+      "id": "3jg0",
+      "userId": "071a",
+      "product_name": "Highlighter",
+      "category": "Writing Instruments",
+      "brand": "Doms",
+      "price": "20",
+      "product_image": "https://www.giftoo.in/cdn/shop/files/Imageye_66_50798b21-2c96-49a1-aa7e-b40e270bc02d.jpg?v=1744895884",
+      "description": "fxgdscvusydghv",
+      "stock": "10"
+    }
+  ]
+}
