@@ -126,6 +126,7 @@ function CardSection() {
 
                   <p>High Quality classic cap hat with stitch logo</p>
                   <h1>high quality shoes</h1>
+                  <h3>cbdcrjcoj</h3>
                 </div>
               </div>
             </div>
