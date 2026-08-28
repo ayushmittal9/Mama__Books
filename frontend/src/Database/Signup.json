@@ -1,0 +1,30 @@
+{
+  "formData": [
+    {
+      "id": "0008",
+      "firstName": "shivanki",
+      "lastName": "garg",
+      "username": "shivi12",
+      "email": "shivigoyal54@gmail.com",
+      "phone": "8172748934",
+      "address": "SH-39",
+      "city": "Jagner",
+      "postalCode": "283115",
+      "password": "shivi12",
+      "confirmPassword": "shivi12"
+    },
+    {
+      "id": "071a",
+      "firstName": "Ayush",
+      "lastName": "Mittal",
+      "username": "Ayushmittal",
+      "email": "mittalayush749@gmail.com",
+      "phone": "8171943833",
+      "address": "main bazar , jagner",
+      "city": "agra",
+      "postalCode": "283115",
+      "password": "ayushmittal",
+      "confirmPassword": "ayushmittal"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+/* Slider */
+.slider {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  padding: 0;
+  will-change: transform;
+  animation: scrollLeft 25s linear infinite;
+}
+
+/* Pause on hover (optional, nice UX touch) */
+.slider-wrapper:hover .slider {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
