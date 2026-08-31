@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
+
 function Navbar() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [user, setUser] = useState(null);
+
   useEffect(() => {
     const storedUser = localStorage.getItem("loggedInUser");
     if (storedUser) {
       setUser(JSON.parse(storedUser));
     }
   }, []);
+
   function viewProfile(userId) {
     navigate(`/profile/${userId.id}`, { state: userId });
   }
@@ -57,10 +60,10 @@ function Navbar() {
                 </div>
                 <ul
                   tabIndex="-1"
-                  className="menu menu-sm dropdown-content bg-base-100 rounded-box  mt-3 w-52 p-2 shadow"
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow"
                 >
                   <li>
-                    <a className="justify-between"  onClick={() => viewProfile(user)}>
+                    <a className="justify-between" onClick={() => viewProfile(user)}>
                       Profile
                       <span className="badge">New</span>
                     </a>
@@ -71,9 +74,6 @@ function Navbar() {
                   <li>
                     <a>Settings</a>
                   </li>
-                  {/* <li>
-                    <a onClick={handleLogout}>Logout</a>
-                  </li> */}
                 </ul>
               </li>
             </>
