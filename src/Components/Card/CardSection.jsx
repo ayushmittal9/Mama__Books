@@ -123,7 +123,8 @@ function CardSection() {
                     <span>{item.price}</span>
                   </h2>
 
-                  <p>High Quality stationery product</p>
+                  <p>High Quality classic cap hat with stitch logo</p>
+                  <h1>high quality shoes</h1>
                 </div>
               </div>
             </div>
