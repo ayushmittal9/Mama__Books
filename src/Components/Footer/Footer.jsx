@@ -8,8 +8,13 @@ function Footer() {
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
         </nav>
+        <nav>
+          <h6 className="footer-title">Legal</h6>
+          <a className="link link-hover">Terms of use</a>
+        </nav>
       </footer>
     </>
   )
 }
 export default Footer
+
