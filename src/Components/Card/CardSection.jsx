@@ -94,9 +94,9 @@ function CardSection() {
   ];
 
   return (
-    <div className="CardSection">
+     <div className="CardSection">
       <div className="para">
-        <p>Check out our latest products!</p>
+        <h1>Check out our latest products!</h1>
       </div>
 
       <div className="slider-wrapper">
@@ -116,7 +116,7 @@ function CardSection() {
                     <span className="text-sm font-normal">{item.price}</span>
                   </h2>
 
-                  <p className="text-xs opacity-75">High Quality classic cap hat with stitch logo</p>
+                  <p className="text-xs opacity-75">High Quality Books with logo</p>
                 </div>
               </div>
             </div>

@@ -1,17 +1,18 @@
-/* Slider Section */
+
 .CardSection {
+  margin-top: 50px;
   overflow: hidden;
   width: 100%;
   padding: 1rem 0;
 }
-
+.CardSection p{
+  font-size: larger;
+}
 .slider-wrapper {
   overflow: hidden;
   width: 100%;
   position: relative;
 }
-
-/* Continuous Infinite Scroll from Left to Right */
 .slider {
   display: flex;
   gap: 16px;
@@ -20,8 +21,6 @@
   will-change: transform;
   animation: scrollRight 25s linear infinite;
 }
-
-/* Pause animation on hover */
 .slider-wrapper:hover .slider,
 .slider:hover {
   animation-play-state: paused;
@@ -36,11 +35,9 @@
     transform: translateX(0%);
   }
 }
-
-/* Slide Card Sizing & Responsiveness */
 .slide-card {
   flex: 0 0 auto;
-  width: 250px;
+  width: 280px;
 }
 
 .slide-card .card {
@@ -49,14 +46,13 @@
   box-sizing: border-box;
 }
 
-/* Uniform Image Sizing */
+/* Uniform Larger Image Sizing */
 .slide-card figure {
   width: 100%;
-  height: 200px;
+  height: 280px;
   overflow: hidden;
   margin: 0;
 }
-
 .slide-card img {
   width: 100%;
   height: 100%;
@@ -73,20 +69,19 @@
 /* Responsive adjust for smaller screens */
 @media (max-width: 768px) {
   .slide-card {
-    width: 200px;
+    width: 220px;
   }
 
   .slide-card figure {
-    height: 160px;
+    height: 220px;
   }
 }
-
 @media (max-width: 480px) {
   .slide-card {
-    width: 160px;
+    width: 180px;
   }
 
   .slide-card figure {
-    height: 130px;
+    height: 180px;
   }
 }
