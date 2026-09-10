@@ -1,15 +1,92 @@
+/* Slider Section */
+.CardSection {
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
+}
 
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
 
-/* Pause on hover (optional, nice UX touch) */
-.slider-wrapper:hover .slider {
+/* Continuous Infinite Scroll from Left to Right */
+.slider {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  padding: 0;
+  will-change: transform;
+  animation: scrollRight 25s linear infinite;
+}
+
+/* Pause animation on hover */
+.slider-wrapper:hover .slider,
+.slider:hover {
   animation-play-state: paused;
 }
 
-@keyframes scrollLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
+/* Keyframes moving from left to right (-50% to 0) */
+@keyframes scrollRight {
+  0% {
     transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Slide Card Sizing & Responsiveness */
+.slide-card {
+  flex: 0 0 auto;
+  width: 250px;
+}
+
+.slide-card .card {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Uniform Image Sizing */
+.slide-card figure {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.slide-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.slide-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive adjust for smaller screens */
+@media (max-width: 768px) {
+  .slide-card {
+    width: 200px;
+  }
+
+  .slide-card figure {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-card {
+    width: 160px;
+  }
+
+  .slide-card figure {
+    height: 130px;
   }
 }
