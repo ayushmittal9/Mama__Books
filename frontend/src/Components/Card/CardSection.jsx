@@ -51,7 +51,6 @@ function CardSection() {
       id: 5,
       images: [
         "https://img.daisyui.com/images/stock/daisyui-hat-1.webp",
-        "https://img.daisyui.com/images/stock/daisyui-hat-2.webp",
         "https://img.daisyui.com/images/stock/daisyui-hat-3.webp",
         "https://img.daisyui.com/images/stock/daisyui-hat-4.webp",
       ],
@@ -93,9 +92,6 @@ function CardSection() {
     },
   ];
 
-  const visibleCards = 8;
-  const cardWidth = 100 / visibleCards;
-
   return (
     <div className="CardSection">
       <div className="para">
@@ -106,25 +102,21 @@ function CardSection() {
       <div className="slider-wrapper">
         <div className="slider">
           {[...cards, ...cards].map((item, index1) => (
-            <div
-              className="slide-card"
-              key={index1}
-              style={{ width: `calc(${cardWidth}% - 10px)` }}
-            >
-              <div className="card card-sm bg-base-200 shadow max-w-60">
+            <div className="slide-card" key={index1}>
+              <div className="card card-sm bg-base-200 shadow">
                 <figure className="hover-gallery">
-                  {item.images.map((src, index) => (
-                    <img key={index} src={src} alt="product" />
-                  ))}
+                  {item.images.length > 0 && (
+                    <img src={item.images[0]} alt={item.title} />
+                  )}
                 </figure>
 
                 <div className="card-body">
-                  <h2 className="card-title flex justify-between">
-                    {item.title}
-                    <span>{item.price}</span>
+                  <h2 className="card-title flex justify-between text-base font-semibold">
+                    <span>{item.title}</span>
+                    <span className="text-sm font-normal">{item.price}</span>
                   </h2>
-                   
-                  <p>High Quality Books with logo</p>
+
+                  <p className="text-xs opacity-75">High Quality Books with logo</p>
                 </div>
               </div>
             </div>
