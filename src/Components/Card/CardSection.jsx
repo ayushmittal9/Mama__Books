@@ -94,9 +94,9 @@ function CardSection() {
   ];
 
   return (
-     <div className="CardSection">
+    <div className="CardSection">
       <div className="para">
-        <h1>Check out our latest products!</h1>
+        <p className="para-title">New Arrivals!</p>
       </div>
 
       <div className="slider-wrapper">
@@ -105,10 +105,10 @@ function CardSection() {
             <div className="slide-card" key={index1}>
               <div className="card card-sm bg-base-200 shadow">
                 <figure className="hover-gallery">
-                  {item.images.length > 0 && (
-                    <img src={item.images[0]} alt={item.title} />
-                  )}
-                </figure>
+  {item.images.map((img, idx) => (
+    <img key={idx} src={img} alt={item.title} />
+  ))}
+</figure>
 
                 <div className="card-body">
                   <h2 className="card-title flex justify-between text-base font-semibold">
@@ -116,7 +116,9 @@ function CardSection() {
                     <span className="text-sm font-normal">{item.price}</span>
                   </h2>
 
-                  <p className="text-xs opacity-75">High Quality Books with logo</p>
+                  <p className="text-xs opacity-75">
+                    High Quality Books with logo
+                  </p>
                 </div>
               </div>
             </div>

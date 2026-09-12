@@ -1,13 +1,32 @@
-
 .CardSection {
   margin-top: 50px;
   overflow: hidden;
   width: 100%;
   padding: 1rem 0;
 }
-.CardSection p{
-  font-size: larger;
+
+/* Bigger, centered heading */
+.para {
+  width: 100%;
 }
+
+.para-title {
+  display: block;
+  width: 100%;
+  margin-left: 40px;
+  font-size: 2.2rem ;
+  font-weight: 600 ;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+  animation: fadeInUp 0.7s ease;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .slider-wrapper {
   overflow: hidden;
   width: 100%;
@@ -26,62 +45,43 @@
   animation-play-state: paused;
 }
 
-/* Keyframes moving from left to right (-50% to 0) */
 @keyframes scrollRight {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
 }
+
 .slide-card {
   flex: 0 0 auto;
   width: 280px;
 }
-
 .slide-card .card {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
 }
 
-/* Uniform Larger Image Sizing */
+/* Slightly taller cards */
 .slide-card figure {
   width: 100%;
-  height: 280px;
+  height: 320px;
   overflow: hidden;
   margin: 0;
 }
-.slide-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform 0.3s ease;
+
+/* Let daisyUI's hover-gallery plugin control image
+   positioning/transitions itself — don't fight it with
+   custom transform/object-fit rules here */
+.slide-card figure img {
+  border-radius: inherit;
 }
 
-.slide-card:hover img {
-  transform: scale(1.05);
-}
-
-/* Responsive adjust for smaller screens */
 @media (max-width: 768px) {
-  .slide-card {
-    width: 220px;
-  }
-
-  .slide-card figure {
-    height: 220px;
-  }
+  .slide-card { width: 220px; }
+  .slide-card figure { height: 260px; }
+  .para p { font-size: 1.6rem; }
 }
 @media (max-width: 480px) {
-  .slide-card {
-    width: 180px;
-  }
-
-  .slide-card figure {
-    height: 180px;
-  }
+  .slide-card { width: 180px; }
+  .slide-card figure { height: 220px; }
+  .para p { font-size: 1.3rem; }
 }
