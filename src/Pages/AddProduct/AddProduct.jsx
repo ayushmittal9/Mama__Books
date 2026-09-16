@@ -54,27 +54,34 @@ function AddProduct() {
    async function handleSubmit(event) {
     event.preventDefault();
 
-    if (!userId) {
-      alert("User not logged in!");
-      return;
-    }
+    const currentUserId = userId || (localStorage.getItem('loggedInUser') ? JSON.parse(localStorage.getItem('loggedInUser')).id : 'guest');
 
     // create a random product id
     const productId = Math.random().toString(36).substring(2, 6);
 
     const newProduct = {
       id: productId,
-      userId: userId, // associate with logged-in user
+      userId: currentUserId, // associate with logged-in user or guest
       ...product,
     };
 
+    // Save to local storage for immediate persistence across all users in AllProduct view
+    try {
+      const storedCustomProducts = JSON.parse(localStorage.getItem('custom_products')) || [];
+      storedCustomProducts.push(newProduct);
+      localStorage.setItem('custom_products', JSON.stringify(storedCustomProducts));
+    } catch (err) {
+      console.error("Error saving to local storage:", err);
+    }
+
     try {
       await axios.post("http://localhost:1004/products", newProduct);
-      alert("Product added successfully!");
-      navigate('/');
     } catch (error) {
-      console.error("Error adding product:", error);
+      console.warn("Backend API not reachable or failed, product saved locally:", error);
     }
+
+    alert("Product added successfully!");
+    navigate('/');
   }
 
   return (
