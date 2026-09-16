@@ -43,6 +43,28 @@
       "product_image": "https://www.giftoo.in/cdn/shop/files/Imageye_66_50798b21-2c96-49a1-aa7e-b40e270bc02d.jpg?v=1744895884",
       "description": "fxgdscvusydghv",
       "stock": "10"
+    },
+    {
+      "id": "dm01",
+      "userId": "user_101",
+      "product_name": "Ball Pen",
+      "category": "Writing Instruments",
+      "brand": "Cello",
+      "price": "15",
+      "product_image": "https://m.media-amazon.com/images/I/61kY8gV3h0L._SX679_.jpg",
+      "description": "Smooth writing ball pen for daily use",
+      "stock": "50"
+    },
+    {
+      "id": "dm02",
+      "userId": "user_102",
+      "product_name": "Stapler",
+      "category": "Office Essentials",
+      "brand": "Kangaro",
+      "price": "120",
+      "product_image": "https://m.media-amazon.com/images/I/61yN2L-aVBL._SX679_.jpg",
+      "description": "Heavy-duty steel stapler with pins",
+      "stock": "15"
     }
   ]
 }
