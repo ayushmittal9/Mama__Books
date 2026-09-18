@@ -99,7 +99,7 @@ function Signup() {
 
     try {
       const res = await axios.post(
-        "http://localhost:1002/formData",
+        "http://localhost:5000/formData",
         formData
       );
 
