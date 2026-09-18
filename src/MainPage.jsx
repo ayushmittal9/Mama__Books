@@ -4,6 +4,7 @@ import Navbar2 from './Components/Navbar2/Navbar2'
 import Home from './Components/Home/Home'
 import CardSection from './Components/Card/CardSection'
 import AllProduct from './Components/AllProduct/AllProduct'
+import Integrations from './Components/Integrations/Integrations'
 import Footer from './Components/Footer/Footer'
 import Theme from './Components/Theme/Theme'
 import Card2 from './Components/Card2/Card2'
@@ -16,6 +17,7 @@ function MainPage() {
       <Home />
       <CardSection />
       <AllProduct />
+      <Integrations />
       <Card2 />
       <Footer />
       <Theme />
