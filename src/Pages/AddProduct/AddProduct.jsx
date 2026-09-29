@@ -17,6 +17,18 @@ function AddProduct() {
     stock: "",
   });
 
+  const productNames = [
+    "Ball Pen",
+    "Gel Pen",
+    "Notebook",
+    "Sketchbook",
+    "Pencil Box",
+    "Eraser",
+    "Sharpener",
+    "Highlighter",
+    "Marker",
+    "Stapler",
+  ];
 
   const categories = [
     "Writing Instruments",
@@ -28,10 +40,6 @@ function AddProduct() {
     "Adhesives & Tape",
     "Craft Materials",
     "Organizers",
-    "Bags & Backpacks",
-    "Lunch Boxes",
-    "Bottles & Flasks",
-    "Sports Gear",
     "Miscellaneous",
   ];
 
@@ -81,15 +89,18 @@ function AddProduct() {
       <div>Add Stationery Product</div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="product-name">Product Name</label>
-        <input
-          type="text"
+        <select
           id="product-name"
           name="product_name"
-          placeholder="Enter product name (e.g., Stainless Steel Water Bottle)"
           value={product.product_name}
           onChange={handleChange}
           required
-        />
+        >
+          <option value="">Select a Product Name</option>
+          {productNames.map((name, index) => (
+            <option key={index} value={name}>{name}</option>
+          ))}
+        </select>
 
         <label htmlFor="category">Category</label>
         <select
@@ -137,7 +148,6 @@ function AddProduct() {
           onChange={handleChange}
           required
         />
-
         <label htmlFor="description">Description</label>
         <textarea
           id="description"
