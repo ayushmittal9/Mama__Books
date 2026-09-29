@@ -138,7 +138,6 @@ function AddProduct() {
           onChange={handleChange}
           required
         />
-
         <label htmlFor="description">Description</label>
         <textarea
           id="description"
