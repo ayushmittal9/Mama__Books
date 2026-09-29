@@ -1,4 +1,3 @@
-
 import './App.css'
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import MainPage from './MainPage'
@@ -10,6 +9,10 @@ import AddProduct from './Pages/AddProduct/AddProduct';
 import ViewProduct from './Pages/ViewProduct/ViewProduct';
 import Beg from './Pages/YourBeg/Beg';
 import Footer from './Components/Footer/Footer';
+import TermsOfUse from './Pages/TermsOfUse/TermsOfUse';
+import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy';
+import CookiePolicy from './Pages/CookiePolicy/CookiePolicy';
+import AboutUs from './Pages/AboutUs/AboutUs';
 
 function App() {
 
@@ -24,7 +27,13 @@ function App() {
         <Route path='/:id/addproduct' element={<AddProduct />} />
         <Route path="/viewproduct/:id" element={<ViewProduct />} />
         <Route path='/yourbeg' element={<Beg />} />
-        <Route path='/footer'  element={<Footer />} />
+        <Route path='/footer' element={<Footer />} />
+        <Route path='/terms-of-use' element={<TermsOfUse />} />
+        <Route path='/terms' element={<TermsOfUse />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+        <Route path='/cookie-policy' element={<CookiePolicy />} />
+        <Route path='/about-us' element={<AboutUs />} />
+        <Route path='/about' element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   )
