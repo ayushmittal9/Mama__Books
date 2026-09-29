@@ -1,5 +1,675 @@
 {
   "products": [
-   
+    {
+      "id": "p_001",
+      "userId": "usr_ayush01",
+      "product_name": "Classmate Pulse 6-Subject Notebook",
+      "category": "Notebooks & Paper",
+      "brand": "Classmate",
+      "price": "240",
+      "product_image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop&q=60",
+      "description": "Spiral bound 300 pages 6-subject divider notebook for college and school notes.",
+      "stock": "50"
+    },
+    {
+      "id": "p_002",
+      "userId": "usr_ayush01",
+      "product_name": "Parker Jotter Stainless Steel Ball Pen",
+      "category": "Writing Instruments",
+      "brand": "Parker",
+      "price": "350",
+      "product_image": "https://images.unsplash.com/photo-1585336261026-6757f541315d?w=500&auto=format&fit=crop&q=60",
+      "description": "Premium refillable ballpoint pen with iconic arrow clip and smooth blue ink.",
+      "stock": "30"
+    },
+    {
+      "id": "p_003",
+      "userId": "usr_ayush01",
+      "product_name": "Milton Thermosteel Insulated Water Bottle 750ml",
+      "category": "Bottles & Flasks",
+      "brand": "Milton",
+      "price": "699",
+      "product_image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&auto=format&fit=crop&q=60",
+      "description": "Double-walled vacuum insulated stainless steel water bottle. Keeps water cold for 24 hours.",
+      "stock": "25"
+    },
+    {
+      "id": "p_004",
+      "userId": "usr_ayush01",
+      "product_name": "Wildcraft Ergonomic School Backpack 35L",
+      "category": "Bags & Backpacks",
+      "brand": "Wildcraft",
+      "price": "1499",
+      "product_image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=60",
+      "description": "Water-resistant multi-compartment backpack with rain cover and padded shoulder straps.",
+      "stock": "20"
+    },
+    {
+      "id": "p_005",
+      "userId": "usr_ayush01",
+      "product_name": "SG Kashmir Willow Cricket Bat Size 6",
+      "category": "Sports Gear",
+      "brand": "SG",
+      "price": "1850",
+      "product_image": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=500&auto=format&fit=crop&q=60",
+      "description": "Lightweight Kashmir willow cricket bat designed for junior and club training.",
+      "stock": "15"
+    },
+
+    {
+      "id": "p_006",
+      "userId": "usr_rahul02",
+      "product_name": "Cello Butterflow Gel Pen Set of 10",
+      "category": "Writing Instruments",
+      "brand": "Cello",
+      "price": "120",
+      "product_image": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=500&auto=format&fit=crop&q=60",
+      "description": "Ultra-smooth gel pens with waterproof Japanese ink and rubber grip.",
+      "stock": "100"
+    },
+    {
+      "id": "p_007",
+      "userId": "usr_rahul02",
+      "product_name": "Camel Artists Water Color Tube Set 12 Shades",
+      "category": "Art Supplies",
+      "brand": "Camel",
+      "price": "280",
+      "product_image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&auto=format&fit=crop&q=60",
+      "description": "Vibrant and blendable watercolor tubes ideal for art students and professionals.",
+      "stock": "40"
+    },
+    {
+      "id": "p_008",
+      "userId": "usr_rahul02",
+      "product_name": "Cello Insulated Stainless Steel Lunch Box 3 Tier",
+      "category": "Lunch Boxes",
+      "brand": "Cello",
+      "price": "850",
+      "product_image": "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=500&auto=format&fit=crop&q=60",
+      "description": "Leak-proof thermal lunch carrier with 3 stainless steel containers and jacket.",
+      "stock": "18"
+    },
+    {
+      "id": "p_009",
+      "userId": "usr_rahul02",
+      "product_name": "Skybags Campus Printed Backpack",
+      "category": "Bags & Backpacks",
+      "brand": "Skybags",
+      "price": "1299",
+      "product_image": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=60",
+      "description": "Stylish printed backpack with built-in pencil pouch and organizer pocket.",
+      "stock": "35"
+    },
+    {
+      "id": "p_010",
+      "userId": "usr_rahul02",
+      "product_name": "DSC English Willow Short Handle Cricket Bat",
+      "category": "Sports Gear",
+      "brand": "DSC",
+      "price": "3499",
+      "product_image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=500&auto=format&fit=crop&q=60",
+      "description": "Pro-grade English willow cricket bat with thick edges and toe guard.",
+      "stock": "10"
+    },
+
+    {
+      "id": "p_011",
+      "userId": "usr_priya03",
+      "product_name": "Faber-Castell Triangular Colored Pencils 24 Pack",
+      "category": "Art Supplies",
+      "brand": "Faber-Castell",
+      "price": "210",
+      "product_image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60",
+      "description": "Ergonomic triangular shape soft lead coloring pencils for school art projects.",
+      "stock": "60"
+    },
+    {
+      "id": "p_012",
+      "userId": "usr_priya03",
+      "product_name": "Navneet Youva Hardcover Register Notebook 200 Pages",
+      "category": "Notebooks & Paper",
+      "brand": "Navneet",
+      "price": "140",
+      "product_image": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=500&auto=format&fit=crop&q=60",
+      "description": "Durable hardcover ruled register suitable for accounts, office, and assignments.",
+      "stock": "45"
+    },
+    {
+      "id": "p_013",
+      "userId": "usr_priya03",
+      "product_name": "Signoraware Executive Stainless Steel Lunch Box",
+      "category": "Lunch Boxes",
+      "brand": "Signoraware",
+      "price": "590",
+      "product_image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60",
+      "description": "Airtight and leak-resistant lunch box with insulated carry bag.",
+      "stock": "30"
+    },
+    {
+      "id": "p_014",
+      "userId": "usr_priya03",
+      "product_name": "Borosil Stainless Steel Hydra Flask 1000ml",
+      "category": "Bottles & Flasks",
+      "brand": "Borosil",
+      "price": "890",
+      "product_image": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=500&auto=format&fit=crop&q=60",
+      "description": "BPA-free vacuum insulated copper coated flask for gym and outdoor trips.",
+      "stock": "22"
+    },
+    {
+      "id": "p_015",
+      "userId": "usr_priya03",
+      "product_name": "Cosco Light Tennis Cricket Ball Pack of 6",
+      "category": "Sports Gear",
+      "brand": "Cosco",
+      "price": "480",
+      "product_image": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=500&auto=format&fit=crop&q=60",
+      "description": "High-bounce durable yellow tennis balls designed for gully cricket and practice.",
+      "stock": "80"
+    },
+
+    {
+      "id": "p_016",
+      "userId": "usr_amit04",
+      "product_name": "Staedtler Mars Plastic Eraser Pack of 4",
+      "category": "Office Essentials",
+      "brand": "Staedtler",
+      "price": "160",
+      "product_image": "https://images.unsplash.com/photo-1588072432836-e10032774350?w=500&auto=format&fit=crop&q=60",
+      "description": "Premium latex-free erasers for crisp erasing without paper damage.",
+      "stock": "75"
+    },
+    {
+      "id": "p_017",
+      "userId": "usr_amit04",
+      "product_name": "Uniball Eye Fine Rollerball Pen Blue",
+      "category": "Writing Instruments",
+      "brand": "Uniball",
+      "price": "80",
+      "product_image": "https://images.unsplash.com/photo-1569388330292-79cc1ec67270?w=500&auto=format&fit=crop&q=60",
+      "description": "Fade-proof waterproof pigment gel pen with smooth ink flow.",
+      "stock": "120"
+    },
+    {
+      "id": "p_018",
+      "userId": "usr_amit04",
+      "product_name": "Safari Thor Waterproof Laptop Backpack 30L",
+      "category": "Bags & Backpacks",
+      "brand": "Safari",
+      "price": "1199",
+      "product_image": "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?w=500&auto=format&fit=crop&q=60",
+      "description": "Dual compartment durable backpack with padded 15.6 inch laptop sleeve.",
+      "stock": "28"
+    },
+    {
+      "id": "p_019",
+      "userId": "usr_amit04",
+      "product_name": "Pigeon Thermo Water Bottle 1 Liter",
+      "category": "Bottles & Flasks",
+      "brand": "Pigeon",
+      "price": "549",
+      "product_image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=60",
+      "description": "Rust-proof stainless steel bottle with leak-proof cap for everyday use.",
+      "stock": "40"
+    },
+    {
+      "id": "p_020",
+      "userId": "usr_amit04",
+      "product_name": "MRF Genius Grand Edition Tennis Bat",
+      "category": "Sports Gear",
+      "brand": "MRF",
+      "price": "1650",
+      "product_image": "https://images.unsplash.com/photo-1607962837359-5e7e89f86a14?w=500&auto=format&fit=crop&q=60",
+      "description": "Full-size popular Kashmir willow bat optimized for hard tennis ball cricket.",
+      "stock": "14"
+    },
+
+    {
+      "id": "p_021",
+      "userId": "usr_sneha05",
+      "product_name": "Stabilo Boss Original Pastel Highlighters Set of 6",
+      "category": "Office Essentials",
+      "brand": "Stabilo",
+      "price": "450",
+      "product_image": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=500&auto=format&fit=crop&q=60",
+      "description": "Soft pastel shade highlighters featuring Anti-Dry-Out technology.",
+      "stock": "35"
+    },
+    {
+      "id": "p_022",
+      "userId": "usr_sneha05",
+      "product_name": "Kokuyo Camlin Drawing Sketchbook A4 Size 100 Pages",
+      "category": "Art Supplies",
+      "brand": "Camlin",
+      "price": "180",
+      "product_image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&auto=format&fit=crop&q=60",
+      "description": "Heavyweight acid-free drawing paper suitable for pencils, charcoal, and ink.",
+      "stock": "50"
+    },
+    {
+      "id": "p_023",
+      "userId": "usr_sneha05",
+      "product_name": "Milton Slim Bento Style Kids Lunch Box",
+      "category": "Lunch Boxes",
+      "brand": "Milton",
+      "price": "399",
+      "product_image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60",
+      "description": "Compartmentalized compact bento box with spoon and fork included.",
+      "stock": "45"
+    },
+    {
+      "id": "p_024",
+      "userId": "usr_sneha05",
+      "product_name": "Puma Sport Training Gym Water Bottle 750ml",
+      "category": "Bottles & Flasks",
+      "brand": "Puma",
+      "price": "499",
+      "product_image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=500&auto=format&fit=crop&q=60",
+      "description": "Squeeze-action lightweight sports bottle with fast-flow cap.",
+      "stock": "30"
+    },
+    {
+      "id": "p_025",
+      "userId": "usr_sneha05",
+      "product_name": "American Tourister Cartoon Print School Bag",
+      "category": "Bags & Backpacks",
+      "brand": "American Tourister",
+      "price": "1599",
+      "product_image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=60",
+      "description": "Vibrant and durable school bag with reflective safety strips for young kids.",
+      "stock": "18"
+    },
+
+    {
+      "id": "p_026",
+      "userId": "usr_vikram06",
+      "product_name": "Kangaro Heavy Duty Desk Stapler HD-10D",
+      "category": "Office Essentials",
+      "brand": "Kangaro",
+      "price": "195",
+      "product_image": "https://images.unsplash.com/photo-1588072432836-e10032774350?w=500&auto=format&fit=crop&q=60",
+      "description": "All-metal construction stapler with staple remover built in.",
+      "stock": "60"
+    },
+    {
+      "id": "p_027",
+      "userId": "usr_vikram06",
+      "product_name": "Reynolds Trimax Gel Pen Pack of 5 Blue",
+      "category": "Writing Instruments",
+      "brand": "Reynolds",
+      "price": "225",
+      "product_image": "https://images.unsplash.com/photo-1585336261026-6757f541315d?w=500&auto=format&fit=crop&q=60",
+      "description": "Advanced fluid ink technology gel pens for long writing sessions.",
+      "stock": "90"
+    },
+    {
+      "id": "p_028",
+      "userId": "usr_vikram06",
+      "product_name": "Kookaburra Turf Leather Cricket Ball Red",
+      "category": "Sports Gear",
+      "brand": "Kookaburra",
+      "price": "1250",
+      "product_image": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=500&auto=format&fit=crop&q=60",
+      "description": "Hand-stitched 4-piece leather cricket ball for tournament matches.",
+      "stock": "16"
+    },
+    {
+      "id": "p_029",
+      "userId": "usr_vikram06",
+      "product_name": "Tupperware Crystalwave Lunch Set",
+      "category": "Lunch Boxes",
+      "brand": "Tupperware",
+      "price": "720",
+      "product_image": "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=500&auto=format&fit=crop&q=60",
+      "description": "Microwave-safe lunch containers with steam vent and carry bag.",
+      "stock": "25"
+    },
+    {
+      "id": "p_030",
+      "userId": "usr_vikram06",
+      "product_name": "Nivia Canvas School Shoes Black",
+      "category": "School Accessories",
+      "brand": "Nivia",
+      "price": "599",
+      "product_image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&auto=format&fit=crop&q=60",
+      "description": "Breathable canvas white/black athletic shoes for school sports uniform.",
+      "stock": "35"
+    },
+
+    {
+      "id": "p_031",
+      "userId": "usr_ananya07",
+      "product_name": "Maped Geometry Box Deluxe Set",
+      "category": "School Stationery",
+      "brand": "Maped",
+      "price": "270",
+      "product_image": "https://images.unsplash.com/photo-1588072432836-e10032774350?w=500&auto=format&fit=crop&q=60",
+      "description": "Precision compass, divider, protractor, set squares, ruler, and mechanical pencil.",
+      "stock": "55"
+    },
+    {
+      "id": "p_032",
+      "userId": "usr_ananya07",
+      "product_name": "Doms Graphite Pencils 2B Box of 10",
+      "category": "Writing Instruments",
+      "brand": "Doms",
+      "price": "70",
+      "product_image": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=500&auto=format&fit=crop&q=60",
+      "description": "Soft graphite pencils ideal for neat writing and shading work.",
+      "stock": "110"
+    },
+    {
+      "id": "p_033",
+      "userId": "usr_ananya07",
+      "product_name": "Fastrack Stainless Steel Water Bottle 800ml",
+      "category": "Bottles & Flasks",
+      "brand": "Fastrack",
+      "price": "650",
+      "product_image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&auto=format&fit=crop&q=60",
+      "description": "Trendy matte finish metallic water bottle with carabiner loop.",
+      "stock": "28"
+    },
+    {
+      "id": "p_034",
+      "userId": "usr_ananya07",
+      "product_name": "Puma Academy Printed Unisex Bag",
+      "category": "Bags & Backpacks",
+      "brand": "Puma",
+      "price": "1399",
+      "product_image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=60",
+      "description": "Lightweight spacious bag with laptop sleeve and water bottle pocket.",
+      "stock": "20"
+    },
+    {
+      "id": "p_035",
+      "userId": "usr_ananya07",
+      "product_name": "CEAT Hitman Edition Cricket Bat Size 5",
+      "category": "Sports Gear",
+      "brand": "CEAT",
+      "price": "1450",
+      "product_image": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=500&auto=format&fit=crop&q=60",
+      "description": "Poplar willow lightweight cricket bat built for junior cricket enthusiasts.",
+      "stock": "12"
+    },
+
+    {
+      "id": "p_036",
+      "userId": "usr_rohit08",
+      "product_name": "Apsara Platinum Extra Dark Pencils Pack of 20",
+      "category": "Writing Instruments",
+      "brand": "Apsara",
+      "price": "110",
+      "product_image": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=500&auto=format&fit=crop&q=60",
+      "description": "Extra dark writing pencils with free sharpener and eraser inside.",
+      "stock": "150"
+    },
+    {
+      "id": "p_037",
+      "userId": "usr_rohit08",
+      "product_name": "Solo Display Book File 40 Pockets A4",
+      "category": "Files & Folders",
+      "brand": "Solo",
+      "price": "230",
+      "product_image": "https://images.unsplash.com/photo-1588072432836-e10032774350?w=500&auto=format&fit=crop&q=60",
+      "description": "Clear pocket display folder for certificates, reports, and artwork.",
+      "stock": "45"
+    },
+    {
+      "id": "p_038",
+      "userId": "usr_rohit08",
+      "product_name": "Milton Steel Combo Pack Lunch Box & Water Bottle",
+      "category": "Lunch Boxes",
+      "brand": "Milton",
+      "price": "999",
+      "product_image": "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=500&auto=format&fit=crop&q=60",
+      "description": "Matching insulated stainless steel lunch bag set with thermal bottle.",
+      "stock": "19"
+    },
+    {
+      "id": "p_039",
+      "userId": "usr_rohit08",
+      "product_name": "Gear Campus Casual 28L Backpack",
+      "category": "Bags & Backpacks",
+      "brand": "Gear",
+      "price": "899",
+      "product_image": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=60",
+      "description": "Durable polyester daily school and tuition bag with padded back panel.",
+      "stock": "30"
+    },
+    {
+      "id": "p_040",
+      "userId": "usr_rohit08",
+      "product_name": "BDM Gold Edition Kashmir Willow Bat",
+      "category": "Sports Gear",
+      "brand": "BDM",
+      "price": "2100",
+      "product_image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=500&auto=format&fit=crop&q=60",
+      "description": "Traditional sweet spot cricket bat with premium rubber grip.",
+      "stock": "8"
+    },
+
+    {
+      "id": "p_041",
+      "userId": "usr_pooja09",
+      "product_name": "Fevicol MR Squeeze Bottle Glue 200g Pack of 2",
+      "category": "Adhesives & Tape",
+      "brand": "Pidilite",
+      "price": "115",
+      "product_image": "https://images.unsplash.com/photo-1588072432836-e10032774350?w=500&auto=format&fit=crop&q=60",
+      "description": "Non-toxic craft adhesive for paper, cardboard, fabric, and wood.",
+      "stock": "70"
+    },
+    {
+      "id": "p_042",
+      "userId": "usr_pooja09",
+      "product_name": "Camlin Kokuyo Acrylic Color Set 18 Shades",
+      "category": "Art Supplies",
+      "brand": "Camlin",
+      "price": "420",
+      "product_image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&auto=format&fit=crop&q=60",
+      "description": "Quick-drying acrylic colors for canvas, clay, wood, and paper surfaces.",
+      "stock": "35"
+    },
+    {
+      "id": "p_043",
+      "userId": "usr_pooja09",
+      "product_name": "Signoraware Slim Stainless Steel Water Bottle 600ml",
+      "category": "Bottles & Flasks",
+      "brand": "Signoraware",
+      "price": "380",
+      "product_image": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=500&auto=format&fit=crop&q=60",
+      "description": "Sleek leak-proof bottle fits easily into school bag side pockets.",
+      "stock": "40"
+    },
+    {
+      "id": "p_044",
+      "userId": "usr_pooja09",
+      "product_name": "Nike Brasilia Medium Training Backpack",
+      "category": "Bags & Backpacks",
+      "brand": "Nike",
+      "price": "1899",
+      "product_image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=60",
+      "description": "Premium sports and school backpack with ventilated shoe compartment.",
+      "stock": "15"
+    },
+    {
+      "id": "p_045",
+      "userId": "usr_pooja09",
+      "product_name": "SS Ton Reserve Edition Kashmir Willow Bat",
+      "category": "Sports Gear",
+      "brand": "SS",
+      "price": "2450",
+      "product_image": "https://images.unsplash.com/photo-1607962837359-5e7e89f86a14?w=500&auto=format&fit=crop&q=60",
+      "description": "Heavy sweet spot bat engineered for powerful stroke play.",
+      "stock": "11"
+    },
+
+    {
+      "id": "p_046",
+      "userId": "usr_suresh10",
+      "product_name": "Pentel Energel 0.7mm Liquid Gel Pen Pack of 3",
+      "category": "Writing Instruments",
+      "brand": "Pentel",
+      "price": "180",
+      "product_image": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=500&auto=format&fit=crop&q=60",
+      "description": "Super-fast drying quick dry gel ink pen ideal for left-handed writers.",
+      "stock": "65"
+    },
+    {
+      "id": "p_047",
+      "userId": "usr_suresh10",
+      "product_name": "Casio FX-82MS 2nd Gen Scientific Calculator",
+      "category": "Office Essentials",
+      "brand": "Casio",
+      "price": "570",
+      "product_image": "https://images.unsplash.com/photo-1588072432836-e10032774350?w=500&auto=format&fit=crop&q=60",
+      "description": "240 functions non-programmable scientific calculator for board exams.",
+      "stock": "50"
+    },
+    {
+      "id": "p_048",
+      "userId": "usr_suresh10",
+      "product_name": "Speedo Insulated Vacuum Water Bottle 1L",
+      "category": "Bottles & Flasks",
+      "brand": "Speedo",
+      "price": "799",
+      "product_image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&auto=format&fit=crop&q=60",
+      "description": "Rugged stainless steel thermal flask for outdoor sports and schooling.",
+      "stock": "22"
+    },
+    {
+      "id": "p_049",
+      "userId": "usr_suresh10",
+      "product_name": "F Gear Ranger Tough School Backpack 32L",
+      "category": "Bags & Backpacks",
+      "brand": "F Gear",
+      "price": "1050",
+      "product_image": "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?w=500&auto=format&fit=crop&q=60",
+      "description": "Multi-zipped heavy duty school bag with reinforced base.",
+      "stock": "27"
+    },
+    {
+      "id": "p_050",
+      "userId": "usr_suresh10",
+      "product_name": "SF Stanford Kashmir Willow Cricket Bat",
+      "category": "Sports Gear",
+      "brand": "SF",
+      "price": "1990",
+      "product_image": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=500&auto=format&fit=crop&q=60",
+      "description": "Hand-crafted Kashmir willow bat with high rebound rubber handle.",
+      "stock": "10"
+    },
+
+    {
+      "id": "p_051",
+      "userId": "usr_neha11",
+      "product_name": "Cello Deco Gel Pens Neon Pack of 5",
+      "category": "Writing Instruments",
+      "brand": "Cello",
+      "price": "90",
+      "product_image": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=500&auto=format&fit=crop&q=60",
+      "description": "Bright neon ink gel pens for bullet journaling and project titles.",
+      "stock": "85"
+    },
+    {
+      "id": "p_052",
+      "userId": "usr_neha11",
+      "product_name": "Classmate Practical Physics & Chemistry Journal",
+      "category": "Notebooks & Paper",
+      "brand": "Classmate",
+      "price": "130",
+      "product_image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop&q=60",
+      "description": "Hardcover practical notebook with graph paper pages for high school experiments.",
+      "stock": "40"
+    },
+    {
+      "id": "p_053",
+      "userId": "usr_neha11",
+      "product_name": "Signoraware Compact Kids Bento Box 2 Compartment",
+      "category": "Lunch Boxes",
+      "brand": "Signoraware",
+      "price": "340",
+      "product_image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60",
+      "description": "Easy lock clip bento lunch box made of food grade BPA free material.",
+      "stock": "33"
+    },
+    {
+      "id": "p_054",
+      "userId": "usr_neha11",
+      "product_name": "Adidas Linear Logo School Backpack",
+      "category": "Bags & Backpacks",
+      "brand": "Adidas",
+      "price": "1699",
+      "product_image": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=60",
+      "description": "Classic 3-Stripes durable polyester backpack with side mesh pouch.",
+      "stock": "16"
+    },
+    {
+      "id": "p_055",
+      "userId": "usr_neha11",
+      "product_name": "Cosco Heavy Weight Tennis Balls Pack of 3",
+      "category": "Sports Gear",
+      "brand": "Cosco",
+      "price": "260",
+      "product_image": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=500&auto=format&fit=crop&q=60",
+      "description": "Heavy felt cricket practice balls engineered for wind resistance.",
+      "stock": "90"
+    },
+
+    {
+      "id": "p_056",
+      "userId": "usr_deepak12",
+      "product_name": "Luxor Fine Writer Felt Tip Pens Pack of 10",
+      "category": "Writing Instruments",
+      "brand": "Luxor",
+      "price": "150",
+      "product_image": "https://images.unsplash.com/photo-1585336261026-6757f541315d?w=500&auto=format&fit=crop&q=60",
+      "description": "0.5mm Japanese tip fine liner pens for diagrams and precise handwriting.",
+      "stock": "70"
+    },
+    {
+      "id": "p_057",
+      "userId": "usr_deepak12",
+      "product_name": "Solo Clip File & Expandable Portfolio Folder",
+      "category": "Files & Folders",
+      "brand": "Solo",
+      "price": "175",
+      "product_image": "https://images.unsplash.com/photo-1588072432836-e10032774350?w=500&auto=format&fit=crop&q=60",
+      "description": "Heavy-gauge polypropylene document organizer with security button snap.",
+      "stock": "50"
+    },
+    {
+      "id": "p_058",
+      "userId": "usr_deepak12",
+      "product_name": "Cellomax Insulated Stainless Steel Hot & Cold Flask",
+      "category": "Bottles & Flasks",
+      "brand": "Cello",
+      "price": "620",
+      "product_image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=60",
+      "description": "12-hour thermal retention hot & cold flask with flip-top lid.",
+      "stock": "30"
+    },
+    {
+      "id": "p_059",
+      "userId": "usr_deepak12",
+      "product_name": "TrackON Waterproof Rain Cover School Bag",
+      "category": "Bags & Backpacks",
+      "brand": "TrackON",
+      "price": "980",
+      "product_image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=60",
+      "description": "3-compartment ergonomically designed tuition and school backpack.",
+      "stock": "24"
+    },
+    {
+      "id": "p_060",
+      "userId": "usr_deepak12",
+      "product_name": "Kookaburra Kahuna Junior Cricket Bat",
+      "category": "Sports Gear",
+      "brand": "Kookaburra",
+      "price": "2890",
+      "product_image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=500&auto=format&fit=crop&q=60",
+      "description": "High profile Kashmir willow cricket bat with lime green factory grip.",
+      "stock": "9"
+    }
   ]
 }
