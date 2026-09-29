@@ -17,18 +17,6 @@ function AddProduct() {
     stock: "",
   });
 
-  // const productNames = [
-  //   "Ball Pen",
-  //   "Gel Pen",
-  //   "Notebook",
-  //   "Sketchbook",
-  //   "Pencil Box",
-  //   "Eraser",
-  //   "Sharpener",
-  //   "Highlighter",
-  //   "Marker",
-  //   "Stapler",
-  // ];
 
   const categories = [
     "Writing Instruments",
@@ -40,11 +28,12 @@ function AddProduct() {
     "Adhesives & Tape",
     "Craft Materials",
     "Organizers",
-     "Bags & Backpacks",
+    "Bags & Backpacks",
     "Lunch Boxes",
     "Bottles & Flasks",
     "Sports Gear",
     "Miscellaneous",
+    "craft and papers"
   ];
 
   function handleChange(event) {
@@ -93,7 +82,7 @@ function AddProduct() {
       <div>Add Stationery Product</div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="product-name">Product Name</label>
-       <input 
+        <input
           type="text"
           id="product-name"
           name="product_name"
@@ -101,8 +90,7 @@ function AddProduct() {
           value={product.product_name}
           onChange={handleChange}
           required
-        >
-        </input>
+        />
 
         <label htmlFor="category">Category</label>
         <select
