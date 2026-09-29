@@ -33,6 +33,7 @@ function AddProduct() {
     "Bottles & Flasks",
     "Sports Gear",
     "Miscellaneous",
+    "craft and papers"
   ];
 
   function handleChange(event) {
