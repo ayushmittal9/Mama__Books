@@ -5,11 +5,17 @@ function Theme() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check localStorage for saved theme on load
+    // Check localStorage for saved theme on load, default to light mode
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       setDarkMode(true);
       applyDarkMode(true);
+    } else {
+      setDarkMode(false);
+      applyDarkMode(false);
+      if (!savedTheme) {
+        localStorage.setItem('theme', 'light');
+      }
     }
   }, []);
 
