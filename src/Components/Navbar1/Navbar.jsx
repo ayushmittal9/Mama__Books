@@ -26,7 +26,7 @@ function Navbar() {
   return (
     <div className="navbar1-wrapper">
       <nav className="navbar1">
-        <div className="logo1">
+        <div className="logo1 cursor-pointer" onClick={() => navigate('/')}>
           Mama<span>Books</span>
         </div>
         <div className="search-bar">
@@ -52,6 +52,12 @@ function Navbar() {
             </>
           ) : (
             <>
+              <li style={{ marginTop: "8px" }}>
+                <Link to="/orders">My Orders</Link>
+              </li>
+              <li style={{ marginTop: "8px" }}>
+                <Link to="/yourbeg">Your Beg</Link>
+              </li>
               <li style={{ marginTop: "8px" }}>
                 <Link to="/contact">Contact</Link>
               </li>
@@ -81,6 +87,9 @@ function Navbar() {
                   </li>
                   <li>
                     <a onClick={() => navigate(`/yourbeg`)}>Your Beg</a>
+                  </li>
+                  <li>
+                    <a onClick={() => navigate(`/orders`)}>My Orders</a>
                   </li>
                   <li>
                     <a onClick={() => user?.id && navigate(`/profile/${user.id}`, { state: user })}>Settings</a>
