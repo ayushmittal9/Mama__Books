@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
@@ -91,7 +89,7 @@ function AllProduct({
   }
 
   function viewProduct(product) {
-    navigate(`../viewproduct/${product.id}`, { state: product });
+    navigate(`/viewproduct/${product.id}`, { state: product });
   }
 
   function edit_item(id) {
@@ -123,31 +121,48 @@ function AllProduct({
                   src={product.product_image}
                   alt={product.product_name}
                   className="product-image"
+                  onClick={() => viewProduct(product)}
+                  style={{ cursor: 'pointer' }}
                 />
                 <h4
                   onClick={() => viewProduct(product)}
-                  style={{ cursor: 'pointer', color: '#4CAF50' }}
+                  style={{ cursor: 'pointer', color: '#007185' }}
                 >
                   {product.product_name}
                 </h4>
-                <p>{product.category}</p>
-                <p>{product.brand}</p>
-                <p>Price: ₹{product.price}</p>
-                <p>Stock: {product.stock}</p>
-                <p>{product.description}</p>
-
-                {showActions && (
-                  <div className="buttons">
-                    <button onClick={() => edit_item(product.id)}>Edit</button>
-                    <button
-                      onClick={() =>
-                        remove_item(product.id, product.product_name)
-                      }
-                    >
-                      Delete
-                    </button>
-                  </div>
+                <p>Category: {product.category}</p>
+                <p>Brand: {product.brand}</p>
+                {product.userId && (
+                  <p style={{ fontSize: '0.8rem', color: '#666' }}>
+                    Seller ID: {product.userId}
+                  </p>
                 )}
+                <p style={{ fontWeight: 'bold', color: '#b12704' }}>
+                  Price: ₹{product.price}
+                </p>
+                <p>Stock: {product.stock}</p>
+                <p className="product-desc-preview">{product.description}</p>
+
+                <div className="buttons" style={{ marginTop: '10px' }}>
+                  <button
+                    onClick={() => viewProduct(product)}
+                    style={{ backgroundColor: '#ffd814', color: '#111', fontWeight: 'bold' }}
+                  >
+                    View Product
+                  </button>
+                  {showActions && (
+                    <>
+                      <button onClick={() => edit_item(product.id)}>Edit</button>
+                      <button
+                        onClick={() =>
+                          remove_item(product.id, product.product_name)
+                        }
+                      >
+                        Delete
+                      </button>
+                    </>
+                  )}
+                </div>
               </div>
             ))
           ) : (
@@ -168,4 +183,3 @@ function AllProduct({
 }
 
 export default AllProduct;
-

@@ -8,6 +8,7 @@ import Profile from './Pages/Profile/Profile';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import ViewProduct from './Pages/ViewProduct/ViewProduct';
 import Beg from './Pages/YourBeg/Beg';
+import Orders from './Pages/Orders/Orders';
 import Footer from './Components/Footer/Footer';
 import TermsOfUse from './Pages/TermsOfUse/TermsOfUse';
 import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy';
@@ -27,6 +28,7 @@ function App() {
         <Route path='/:id/addproduct' element={<AddProduct />} />
         <Route path="/viewproduct/:id" element={<ViewProduct />} />
         <Route path='/yourbeg' element={<Beg />} />
+        <Route path='/orders' element={<Orders />} />
         <Route path='/footer' element={<Footer />} />
         <Route path='/terms-of-use' element={<TermsOfUse />} />
         <Route path='/terms' element={<TermsOfUse />} />
