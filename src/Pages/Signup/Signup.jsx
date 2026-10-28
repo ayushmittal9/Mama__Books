@@ -99,7 +99,7 @@ function Signup() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/formData",
+        "http://localhost:8080/api/users/signup",
         formData
       );
 
@@ -108,7 +108,7 @@ function Signup() {
         JSON.stringify(res.data)
       );
 
-      toast.success("Signup successful!");
+      toast.success("Signup successful! Data saved to MySQL.");
 
       setTimeout(() => {
         navigate("/");
@@ -116,7 +116,8 @@ function Signup() {
       }, 1000);
     } catch (error) {
       console.error("Error while signing up:", error);
-      toast.error("Something went wrong during signup!");
+      const errorMessage = error.response?.data || "Something went wrong during signup!";
+      toast.error(typeof errorMessage === "string" ? errorMessage : "Signup failed!");
     }
   };
 
