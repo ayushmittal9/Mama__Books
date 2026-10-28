@@ -53,12 +53,6 @@ function Navbar() {
           ) : (
             <>
               <li style={{ marginTop: "8px" }}>
-                <Link to="/orders">My Orders</Link>
-              </li>
-              <li style={{ marginTop: "8px" }}>
-                <Link to="/yourbeg">Your Beg</Link>
-              </li>
-              <li style={{ marginTop: "8px" }}>
                 <Link to="/contact">Contact</Link>
               </li>
               <li className="dropdown dropdown-end profile-dropdown-container">

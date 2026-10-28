@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,38 +8,30 @@ import axios from 'axios';
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [admins, setAdmins] = useState([]);
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    axios.get('http://localhost:1002/formData')
-      .then((res) => {
-        console.log(res.data);
-        setAdmins(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
-  function login_admin(e) {
+  async function login_admin(e) {
     e.preventDefault();
 
-    const loggedUser = admins.find(
-      (admin) => admin.username === username && admin.password === password
-    );
+    try {
+      // Call Spring Boot backend to authenticate with MySQL database
+      const response = await axios.post('http://localhost:8080/api/users/login', {
+        email: username, // Can pass email or username
+        password: password
+      });
 
-    if (loggedUser) {
+      const loggedUser = response.data;
       localStorage.setItem("userId", loggedUser.id);
-      localStorage.setItem("username", loggedUser.username);
+      localStorage.setItem("username", loggedUser.username || loggedUser.email);
       localStorage.setItem("loggedInUser", JSON.stringify(loggedUser));
 
       toast.success("Login successful");
-
       navigate('/');
-    } else {
-      toast.error("Login error - Invalid username or password");
+    } catch (error) {
+      console.error("Login error:", error);
+      const msg = error.response?.data || "Invalid credentials!";
+      toast.error(typeof msg === "string" ? msg : "Login failed!");
     }
   }
 
