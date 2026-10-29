@@ -1,10 +1,9 @@
-
-
 import React, { useState, useEffect } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import defaultProductData from '../../Database/Product.json';
 import './AllProduct.css';
 
 function AllProduct({
@@ -18,34 +17,65 @@ function AllProduct({
   const [force, setForce] = useState(0);
 
   useEffect(() => {
+    // Helper to merge and filter products from API/local sources
+    const processProducts = (apiProducts = []) => {
+      let localCustomProducts = [];
+      try {
+        localCustomProducts = JSON.parse(localStorage.getItem('custom_products')) || [];
+      } catch (err) {
+        console.error("Error loading custom_products from localStorage:", err);
+      }
+
+      const initialProducts = defaultProductData.products || [];
+
+      // Combine sources, avoiding duplicates by product id
+      const combinedMap = new Map();
+      [...initialProducts, ...localCustomProducts, ...apiProducts].forEach((item) => {
+        if (item && item.id) {
+          combinedMap.set(item.id.toString(), item);
+        }
+      });
+
+      let allProducts = Array.from(combinedMap.values());
+
+      // Filter by userId if specified (for profile "Your Added Products")
+      if (userId) {
+        allProducts = allProducts.filter(
+          (product) => product.userId === userId
+        );
+      }
+
+      // Filter by filterIds if specified (for "Your Beg")
+      if (Array.isArray(filterIds)) {
+        const ids = filterIds.map(id => id.toString());
+        allProducts = allProducts.filter((product) =>
+          ids.includes(product.id.toString())
+        );
+      }
+
+      setProducts(allProducts);
+    };
+
     axios
       .get("http://localhost:1004/products")
       .then((response) => {
-        let fetchedProducts = response.data;
-
-        // sirf specific user ke products (agar userId diya ho)
-        if (userId) {
-          fetchedProducts = fetchedProducts.filter(
-            (product) => product.userId === userId
-          );
-        }
-
-        // Beg/cart filter: sirf filterIds wale products
-        if (Array.isArray(filterIds)) {
-          const ids = filterIds.map(id => id.toString());
-          fetchedProducts = fetchedProducts.filter((product) =>
-            ids.includes(product.id.toString())
-          );
-        }
-
-        setProducts(fetchedProducts);
+        processProducts(response.data);
       })
       .catch((error) => {
-        console.error("Error fetching products:", error);
+        console.warn("Backend server not reached, using local storage and default json data:", error);
+        processProducts([]);
       });
   }, [force, userId, filterIds]);
 
   function remove_item(id, name) {
+    try {
+      let localCustomProducts = JSON.parse(localStorage.getItem('custom_products')) || [];
+      localCustomProducts = localCustomProducts.filter(p => p.id.toString() !== id.toString());
+      localStorage.setItem('custom_products', JSON.stringify(localCustomProducts));
+    } catch (err) {
+      console.error("Error updating local custom_products on delete:", err);
+    }
+
     axios
       .delete(`http://localhost:1004/products/${id}`)
       .then(() => {
@@ -53,12 +83,13 @@ function AllProduct({
         setForce((prev) => prev + 1);
       })
       .catch(() => {
-        toast.error("Item not found");
+        toast.success(`${name} has been deleted`);
+        setForce((prev) => prev + 1);
       });
   }
 
   function viewProduct(product) {
-    navigate(`../viewproduct/${product.id}`, { state: product });
+    navigate(`/viewproduct/${product.id}`, { state: product });
   }
 
   function edit_item(id) {
@@ -90,31 +121,48 @@ function AllProduct({
                   src={product.product_image}
                   alt={product.product_name}
                   className="product-image"
+                  onClick={() => viewProduct(product)}
+                  style={{ cursor: 'pointer' }}
                 />
                 <h4
                   onClick={() => viewProduct(product)}
-                  style={{ cursor: 'pointer', color: '#4CAF50' }}
+                  style={{ cursor: 'pointer', color: '#007185' }}
                 >
                   {product.product_name}
                 </h4>
-                <p>{product.category}</p>
-                <p>{product.brand}</p>
-                <p>Price: ₹{product.price}</p>
-                <p>Stock: {product.stock}</p>
-                <p>{product.description}</p>
-
-                {showActions && (
-                  <div className="buttons">
-                    <button onClick={() => edit_item(product.id)}>Edit</button>
-                    <button
-                      onClick={() =>
-                        remove_item(product.id, product.product_name)
-                      }
-                    >
-                      Delete
-                    </button>
-                  </div>
+                <p>Category: {product.category}</p>
+                <p>Brand: {product.brand}</p>
+                {product.userId && (
+                  <p style={{ fontSize: '0.8rem', color: '#666' }}>
+                    Seller ID: {product.userId}
+                  </p>
                 )}
+                <p style={{ fontWeight: 'bold', color: '#b12704' }}>
+                  Price: ₹{product.price}
+                </p>
+                <p>Stock: {product.stock}</p>
+                <p className="product-desc-preview">{product.description}</p>
+
+                <div className="buttons" style={{ marginTop: '10px' }}>
+                  <button
+                    onClick={() => viewProduct(product)}
+                    style={{ backgroundColor: '#ffd814', color: '#111', fontWeight: 'bold' }}
+                  >
+                    View Product
+                  </button>
+                  {showActions && (
+                    <>
+                      <button onClick={() => edit_item(product.id)}>Edit</button>
+                      <button
+                        onClick={() =>
+                          remove_item(product.id, product.product_name)
+                        }
+                      >
+                        Delete
+                      </button>
+                    </>
+                  )}
+                </div>
               </div>
             ))
           ) : (
@@ -135,4 +183,3 @@ function AllProduct({
 }
 
 export default AllProduct;
-

@@ -93,38 +93,32 @@ function CardSection() {
     },
   ];
 
-  const visibleCards = 8;
-  const cardWidth = 100 / visibleCards;
-
   return (
     <div className="CardSection">
       <div className="para">
-        <p>Check out our latest products!</p>
+        <p className="para-title">New Arrivals!</p>
       </div>
 
       <div className="slider-wrapper">
         <div className="slider">
           {[...cards, ...cards].map((item, index1) => (
-            <div
-              className="slide-card"
-              key={index1}
-              style={{ width: `calc(${cardWidth}% - 10px)` }}
-            >
-              <div className="card card-sm bg-base-200 shadow max-w-60">
+            <div className="slide-card" key={index1}>
+              <div className="card card-sm bg-base-200 shadow">
                 <figure className="hover-gallery">
-                  {item.images.map((src, index) => (
-                    <img key={index} src={src} alt="product" />
-                  ))}
-                </figure>
+  {item.images.map((img, idx) => (
+    <img key={idx} src={img} alt={item.title} />
+  ))}
+</figure>
 
                 <div className="card-body">
-                  <h2 className="card-title flex justify-between">
-                    {item.title}
-                    <span>{item.price}</span>
+                  <h2 className="card-title flex justify-between text-base font-semibold">
+                    <span>{item.title}</span>
+                    <span className="text-sm font-normal">{item.price}</span>
                   </h2>
 
-                  <p>High Quality classic cap hat with stitch logo</p>
-                  <h1>high quality shoes</h1>
+                  <p className="text-xs opacity-75">
+                    High Quality Books with logo
+                  </p>
                 </div>
               </div>
             </div>

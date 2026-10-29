@@ -17,18 +17,6 @@ function AddProduct() {
     stock: "",
   });
 
-  const productNames = [
-    "Ball Pen",
-    "Gel Pen",
-    "Notebook",
-    "Sketchbook",
-    "Pencil Box",
-    "Eraser",
-    "Sharpener",
-    "Highlighter",
-    "Marker",
-    "Stapler",
-  ];
 
   const categories = [
     "Writing Instruments",
@@ -40,7 +28,12 @@ function AddProduct() {
     "Adhesives & Tape",
     "Craft Materials",
     "Organizers",
+    "Bags & Backpacks",
+    "Lunch Boxes",
+    "Bottles & Flasks",
+    "Sports Gear",
     "Miscellaneous",
+    "craft and papers"
   ];
 
   function handleChange(event) {
@@ -54,27 +47,34 @@ function AddProduct() {
    async function handleSubmit(event) {
     event.preventDefault();
 
-    if (!userId) {
-      alert("User not logged in!");
-      return;
-    }
+    const currentUserId = userId || (localStorage.getItem('loggedInUser') ? JSON.parse(localStorage.getItem('loggedInUser')).id : 'guest');
 
     // create a random product id
     const productId = Math.random().toString(36).substring(2, 6);
 
     const newProduct = {
       id: productId,
-      userId: userId, // associate with logged-in user
+      userId: currentUserId, // associate with logged-in user or guest
       ...product,
     };
 
+    // Save to local storage for immediate persistence across all users in AllProduct view
+    try {
+      const storedCustomProducts = JSON.parse(localStorage.getItem('custom_products')) || [];
+      storedCustomProducts.push(newProduct);
+      localStorage.setItem('custom_products', JSON.stringify(storedCustomProducts));
+    } catch (err) {
+      console.error("Error saving to local storage:", err);
+    }
+
     try {
       await axios.post("http://localhost:1004/products", newProduct);
-      alert("Product added successfully!");
-      navigate('/');
     } catch (error) {
-      console.error("Error adding product:", error);
+      console.warn("Backend API not reachable or failed, product saved locally:", error);
     }
+
+    alert("Product added successfully!");
+    navigate('/');
   }
 
   return (
@@ -82,18 +82,15 @@ function AddProduct() {
       <div>Add Stationery Product</div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="product-name">Product Name</label>
-        <select
+        <input
+          type="text"
           id="product-name"
           name="product_name"
+          placeholder="Enter product name (e.g., Stainless Steel Water Bottle)"
           value={product.product_name}
           onChange={handleChange}
           required
-        >
-          <option value="">Select a Product Name</option>
-          {productNames.map((name, index) => (
-            <option key={index} value={name}>{name}</option>
-          ))}
-        </select>
+        />
 
         <label htmlFor="category">Category</label>
         <select
@@ -141,7 +138,6 @@ function AddProduct() {
           onChange={handleChange}
           required
         />
-
         <label htmlFor="description">Description</label>
         <textarea
           id="description"

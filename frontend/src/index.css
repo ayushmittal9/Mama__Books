@@ -1,2 +1,107 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* Global Dark Mode Support */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1f2937;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+}
+
+html.dark,
+[data-theme="dark"],
+body.dark {
+  --bg-color: #121827;
+  --text-color: #f3f4f6;
+  --card-bg: #1f2937;
+  --card-border: #374151;
+  background-color: #121827 !important;
+  color: #f3f4f6 !important;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode adjustments for cards, headers, containers */
+html.dark .card-component,
+[data-theme="dark"] .card-component {
+  background: #1f2937 !important;
+  color: #f3f4f6 !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark .text-side,
+[data-theme="dark"] .text-side {
+  background: #111827 !important;
+}
+
+html.dark .card-carousel-caption h2,
+[data-theme="dark"] .card-carousel-caption h2 {
+  color: #f9fafb !important;
+}
+
+html.dark .card-carousel-caption p,
+[data-theme="dark"] .card-carousel-caption p {
+  color: #d1d5db !important;
+}
+
+html.dark .para-title,
+[data-theme="dark"] .para-title {
+  color: #f9fafb !important;
+}
+
+html.dark .Dashboard,
+[data-theme="dark"] .Dashboard {
+  background-color: #111827 !important;
+}
+
+html.dark .Dashboard .dashboard-content h3,
+[data-theme="dark"] .Dashboard .dashboard-content h3 {
+  color: #f9fafb !important;
+}
+
+html.dark .Dashboard .product-card,
+[data-theme="dark"] .Dashboard .product-card {
+  background: #1f2937 !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+html.dark .Dashboard .product-card h4,
+[data-theme="dark"] .Dashboard .product-card h4 {
+  color: #4ade80 !important;
+}
+
+html.dark .Dashboard .product-card p,
+[data-theme="dark"] .Dashboard .product-card p {
+  color: #cbd5e1 !important;
+}
+
+html.dark .navbar1-wrapper,
+[data-theme="dark"] .navbar1-wrapper {
+  background-color: #0f172a !important;
+}
+
+html.dark .profile-dropdown-menu,
+[data-theme="dark"] .profile-dropdown-menu {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+html.dark .profile-dropdown-menu a,
+[data-theme="dark"] .profile-dropdown-menu a {
+  color: #f1f5f9 !important;
+}
+
+html.dark .profile-dropdown-menu a:hover,
+[data-theme="dark"] .profile-dropdown-menu a:hover {
+  background-color: #334155 !important;
+}
+
+html.dark .user-info-header span,
+[data-theme="dark"] .user-info-header span {
+  color: #f8fafc !important;
+}
